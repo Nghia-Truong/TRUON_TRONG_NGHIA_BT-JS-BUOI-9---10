@@ -65,10 +65,9 @@ function capNhatNV() {
 document.getElementById('btnTimNV').onclick = function () {
     var loaiNhanVienCanTim = document.getElementById('searchName').value
     console.log("🚀 [ loaiNhanVienCanTim:", loaiNhanVienCanTim)
-    var danhSachNhanVienCanTim = DSNV.filter(function (loaiNhanVienCanTim) {
-        return DSNV.loaiNV == loaiNhanVienCanTim
+    var danhSachNhanVienCanTim = DSNV.filter(function (nvCanTim) {
+        return nvCanTim.loaiNV == loaiNhanVienCanTim
     });
     console.log("🚀 [ danhSachNhanVienCanTim [ danhSachNhanVienCanTim:", danhSachNhanVienCanTim)
-    hienThiThongTinNV(danhSachNhanVienCanTim)
     renderDSNV(danhSachNhanVienCanTim)
 }
